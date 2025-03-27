@@ -1,4 +1,4 @@
-export class Marqueefy {
+class Marqueefy {
     constructor(selector, options = {}) {
       this.container = document.querySelector(selector);
       if (!this.container) {

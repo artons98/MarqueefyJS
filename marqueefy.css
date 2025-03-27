@@ -2,8 +2,6 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    /* background: var(--bs-primary, #d6068e); */
-    /* color: var(--bs-light, #fff); */
     white-space: nowrap;
   }
   

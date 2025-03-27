@@ -40,7 +40,7 @@ export class Marqueefy {
     }
   
     _init() {
-
+        this._insertStyles();
       this.container.classList.add("marqueefy-container");
   
       const originalItems = Array.from(this.container.children);
@@ -108,4 +108,33 @@ export class Marqueefy {
   
       requestAnimationFrame(() => this._animate());
     }
+    _insertStyles() {
+        if (document.getElementById('marqueefy-styles')) return;
+      
+        const style = document.createElement('style');
+        style.id = 'marqueefy-styles';
+        style.textContent = `
+          .marqueefy-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            white-space: nowrap;
+        }
+        
+        .marqueefy-track {
+            display: flex;
+            width: max-content;
+            white-space: nowrap;
+            will-change: transform;
+        }
+        
+        .marqueefy-track > * {
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        `;
+        document.head.appendChild(style);
+      }
   }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marqueefy Demo</title>
+  <link rel="stylesheet" href="marqueefy.css">
+  <style>
+    .marqueefy-container svg {
+      margin: 0 0.5rem;
+    }
+    .marqueefy-group > div {
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="marqueefy-container" id="promo-marquee">
+    <div class="promo-item">🎉 Gratis verzending vanaf €25</div>
+    <div class="promo-item">✅ Veilig betalen met iDEAL</div>
+    <div class="promo-item">🏫 Speciale prijzen voor onderwijs</div>
+  </div>
+
+  <script type="module">
+    import { Marqueefy } from './marqueefy.js';
+    new Marqueefy('#promo-marquee', {
+        speed: 0.75,       // scrollsnelheid
+        pauseOnHover: true, // optioneel
+        responsive: {
+            default: 6, // desktop
+            768: 3,     // tablet
+            480: 1      // mobiel
+        },
+    });
+  </script>
+</body>
+</html>

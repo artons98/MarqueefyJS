@@ -1,0 +1,22 @@
+.marqueefy-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /* background: var(--bs-primary, #d6068e); */
+    /* color: var(--bs-light, #fff); */
+    white-space: nowrap;
+  }
+  
+  .marqueefy-track {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  
+  .marqueefy-track > * {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }

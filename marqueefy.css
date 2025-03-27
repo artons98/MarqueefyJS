@@ -3,18 +3,18 @@
     position: relative;
     width: 100%;
     white-space: nowrap;
-  }
+}
   
-  .marqueefy-track {
+.marqueefy-track {
     display: flex;
     width: max-content;
     white-space: nowrap;
     will-change: transform;
-  }
+}
   
-  .marqueefy-track > * {
+.marqueefy-track > * {
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
     flex-shrink: 0;
-  }
+}
